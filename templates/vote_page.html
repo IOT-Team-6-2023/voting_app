@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>This is the voting page</h1>
+
+<form action="/vote/votingAction/" method="post">
+    {% csrf_token %}
+    Enter the candidate ID: <input type="text" name="candidate_id"><br>
+    Enter the constituency ID: <input type="text" name="constituency_id"><br>
+    <input type="submit">
+</form>
+{% endblock %}
