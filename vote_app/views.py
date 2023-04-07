@@ -6,7 +6,7 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return render(request,'home.html', {'name':'Deepta'})
+    return render(request,'home.html')
 
 def candidate_list(request):
     api_end_point = ""
