@@ -9,7 +9,8 @@ def index(request):
     return render(request,'home.html', {'name':'Deepta'})
 
 def candidate_list(request):
-    response = requests.get('https://api.covid19api.com/countries').json()
+    api_end_point = ""
+    response = requests.get(api_end_point).json()
     return render(request,'candidate_list.html', {'response': response})
 
 def vote_candidate(request):
