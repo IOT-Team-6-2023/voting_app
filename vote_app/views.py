@@ -18,9 +18,7 @@ def vote_candidate(request):
 
 def votingAction(request):
     candidate_id = request.POST.get("candidate_id")
-    constituency_id = request.POST.get('constituency_id')
-    post_data = {'candidate_id':candidate_id, 'constituency_id':constituency_id }
+    # constituency_id = request.POST.get('constituency_id')
+    post_data = {'candidate_id':candidate_id }
     # api_response = requests.post(url = "api_endpoint", data = post_data )
     return render(request, 'vote_confirm.html',post_data)
-
-# {'candidate_id': candidate_id, 'constituency_id': constituency_id}
